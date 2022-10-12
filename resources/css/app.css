@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-inter text-white-primary;
+}
+
+body {
+    @apply bg-body scroll-smooth;
+}
+
+body::-webkit-scrollbar {
+    @apply w-3 h-3
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    @apply bg-gray-400
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    @apply bg-slate-secondary
+}
+
+/* burger button */
+.list-mobile {
+    animation: zoom-in 0.3s;
+}
+
+@keyframes zoom-in {
+    0% {
+        @apply opacity-0;
+    }
+
+    100% {
+        @apply opacity-100;
+    }
+}
+
+/* jumbotron */
+.text-first {
+    background: linear-gradient(90deg, #334fe6 1.92%, #a9b2e3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding: 1px 0;
+}
+
+/* jumbotron content */
+.jumbotron-content {
+    background-image: url(/public/img/content-jumbotron.svg);
+}
+
+/* container code */
+.container-code {
+    @apply bg-slate-primary rounded-[10px] border border-slate-secondary flex justify-center p-4;
+}
+
+.box-code {
+    @apply w-[250px] py-2 overflow-auto sm-360:w-[280px] sm-412:w-[310px] sm-450:w-[370px] sm-480:w-[400px] sm-510:w-[430px] sm-540:w-[460px] sm-570:w-[490px] sm-600:w-[520px] sm-630:w-[550px] sm-660:w-[580px] sm-690:w-[610px] sm-720:w-[640px] sm-750:w-[670px] md-768:w-[600px];
+}
+
+.box-code::-webkit-scrollbar {
+    @apply w-3 h-3
+}
+
+/* Track */
+.box-code::-webkit-scrollbar-track {
+    @apply bg-[#353c49]
+}
+
+/* Handle */
+.box-code::-webkit-scrollbar-thumb {
+    @apply bg-[#283143]
+}
+
+.box-code::-webkit-scrollbar-corner {
+    @apply bg-transparent
+}
+
+.code {
+    @apply w-max;
+}
+
+.code pre {
+    @apply font-consolas text-sm;
+}
+
+.link {
+    @apply text-blue-strong underline decoration-1
+}
+
+.bold {
+    @apply font-bold text-white
+}
+
+.list-num {
+    @apply list-decimal ml-5
+}
+
+.list-num li::marker, .list-bull li::marker {
+    @apply text-slate-500
+}
+
+.list-bull {
+    @apply list-disc ml-5
+}
+
+.disclaimer {
+    @apply border-l-4 border-pink-700 pl-2
+}
+
+.img-content {
+    @apply rounded-[10px]
+}
+
+.highlight {
+    @apply text-green-600
+}
+
+.subtitle {
+    @apply capitalize text-pink-600 text-2xl font-bold text-left
+}
+
+.tagar {
+    @apply text-blue-400
+}
+
+p.text-sm.text-gray-700.leading-5 {
+    @apply hidden
+}
+
+.relative.inline-flex.items-center.px-4.py-2.-ml-px.text-sm.font-medium.text-gray-700.bg-white.border.border-gray-300.leading-5 {
+    @apply bg-slate-primary border-slate-secondary text-white-primary
+}
+
+.relative.inline-flex.items-center.px-4.py-2.-ml-px.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.leading-5 {
+    @apply bg-slate-primary border-slate-secondary text-blue-strong
+}
+
+.relative.inline-flex.items-center.px-2.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.rounded-l-md.leading-5 {
+    @apply bg-slate-primary border-slate-secondary
+}
+
+.relative.inline-flex.items-center.px-2.py-2.-ml-px.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.rounded-r-md.leading-5 {
+    @apply bg-slate-primary border-slate-secondary
+}
+
+.relative.inline-flex.items-center.px-2.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.rounded-l-md.leading-5 {
+    @apply bg-slate-primary border-slate-secondary
+}
+
+.relative.inline-flex.items-center.px-4.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.leading-5.rounded-md, .relative.inline-flex.items-center.px-4.py-2.text-sm.font-medium.text-gray-700.bg-white.border.border-gray-300.leading-5.rounded-md {
+    @apply bg-slate-primary border-slate-secondary text-white-primary
+}
+
+/* login */
+.login-page, .header-about {
+    background-image: url(/public/img/content-jumbotron.svg);
+}
+
+.login-error {
+    animation: top-bottom 0.5s;
+}
+
+@keyframes top-bottom {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.admin-alert {
+    animation: top-down 0.3s;
+}
+
+@keyframes top-down {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.jumboron{
+    background-image: url(/public/img/jumbotron.svg);
+}
+
+.category, .category-mobile {
+    animation: category 0.5s;
+}
+
+.category-show {
+    display: block;
+}
+
+@keyframes category {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.arrow-up {
+    @apply rotate-180 mt-1
+}
+
+.category-hide {
+    @apply hidden
+}
+
+.header-about::-webkit-scrollbar {
+    @apply w-3 h-3
+}
+
+/* Track */
+.header-about::-webkit-scrollbar-track {
+    @apply bg-transparent
+}
+
+/* Handle */
+.header-about::-webkit-scrollbar-thumb {
+    @apply bg-transparent
+}
